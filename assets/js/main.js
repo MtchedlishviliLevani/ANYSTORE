@@ -5,6 +5,14 @@ let currentPage = 1;
 const cardsPerPage = 12;
 let totalCards = 0;
 
+// burgermenu.addEventListener("click", (e) => {
+//   if (nav.classList.contains("active-nav")) {
+//     nav.classList.remove("active-nav");
+//     nav.classList.add("navigation");
+//   }
+// });
+
+//end
 function fetchData(skip, limit) {
   let url = `https://dummyjson.com/products?limit=${limit}&skip=${skip}`;
 

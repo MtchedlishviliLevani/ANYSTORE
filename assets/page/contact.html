@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/style/reset.css">
-    <link rel="stylesheet" href="./assets/style/style.css">
-    <title> A N Y S T O R E</title>
+    <link rel="stylesheet" href="../style/reset.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Contact</title>
 </head>
 
 <body>
     <header>
         <div class="container">
             <nav class="top-nav">
-                <a class="logo-link" href="index.html"><span class="logo">STORE</span></a>
+                <a class="logo-link" href="../../index.html"><span class="logo">STORE</span></a>
                 <ul class="navigation">
-                    <li><a style="color:black; font-weight:600" href="index.html">Home</a></li>
+                    <li><a style="color:black; font-weight:600" href="../../index.html">Home</a></li>
                     <li><a href="#">Shop</a></li>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Blog</a></li>
@@ -54,13 +54,13 @@
             <div class="container">
                 <div class="menu-wrapper">
                     <div class="menu">
-                        <a href="#"><img src="./assets/images/menu.png" alt="menu icon" /></a>
+                        <a href="#"><img src="../images/menu.png" alt="menu icon" /></a>
                         <a href="#">Categories</a>
 
 
                     </div>
                     <div class="search-container">
-                        <img class="search-icon" src="./assets/images/search.png" alt="">
+                        <img class="search-icon" src="../images/search.png" alt="Search icon">
                         <input class="search-input" type="search" placeholder="Search for the product" />
                     </div>
                 </div>
@@ -70,15 +70,34 @@
 
     </header>
     <main>
-        <div class="container">
-            <div id="loader"></div>
-            <h1>Check the best deals</h1>
-            <div class="like"></div>
-            <div id="card-container">
+        <section class="contact-sec">
+            <div class="signup-form">
+                <form>
+                    <h1>contact us</h1>
+                    <p>Our friendly team would to hear from you!</p>
+                    <div class="full-name">
+                        <div class="input-box1">
+                            <label for="first_name">First name</label><br />
+                            <input type="text" id="first_name" name="first_name" placeholder="Levan" required />
+                        </div>
+                        <div class="input-box2">
+                            <label for="last_name">Last Name:</label><br />
+                            <input type="text" id="last_name" name="last_name" placeholder="Mtchedlishvili" required />
+                        </div>
+                    </div>
+
+                    <br />
+                    <label for="email">Email</label><br />
+                    <input type="email" placeholder="info@smartshop.ge" name="email" id="email" /><br />
+                    <label for="tel">Phone number</label><br />
+                    <input type="tel" placeholder="+995 555 78 65 43" name="tel" id="tel" /><br />
+                    <label for="message">Message</label><br />
+                    <input type="text" name="message" id="message" /><br />
+                    <input type="submit" value="Send Message" id="submit" />
+                </form>
 
             </div>
-            <div id="pagination"></div>
-        </div>
+        </section>
     </main>
     <footer>
         <div class="container">
@@ -87,25 +106,25 @@
                     <div class="left-side-footer">
                         <a class="footer-logo" href="#">ANYSTORE</a>
                         <div class="icons">
-                            <img src="./assets/images/Instagram.png" alt="instagram icon" />
-                            <img src="./assets/images/Linkedin.png" alt="Linkdin icon" />
-                            <img src="./assets/images/Twitter.png" alt="Twitter icon" />
+                            <img src="../images/Instagram.png" alt="instagram icon" />
+                            <img src="../images/Linkedin.png" alt="Linkdin icon" />
+                            <img src="../images/Twitter.png" alt="Twitter icon" />
                         </div>
                     </div>
                     <div class="middle-side-footer">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="../../index.html">Home</a></li>
                             <li><a href="#">About us</a></li>
                             <li><a href="#">Blog</a></li>
                         </ul>
                         <ul>
-                            <li><a href="index.html">Shop</a></li>
+                            <li><a href="../../index.html">Shop</a></li>
                             <li><a href="#">Categories</a></li>
                         </ul>
                         <ul>
                             <li><a href="#"> Contact us</a></li>
                             <li>+995 678 465 993</li>
-                            <li>info@Anystore.ge</li>
+                            <li>info@ANYSTORE.ge</li>
                         </ul>
                     </div>
                     <div class="right-side-footer">
@@ -118,8 +137,9 @@
             </div>
         </div>
     </footer>
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/general.js"></script>
+
+    <script src="../js/general.js"></script>
+
 </body>
 
 </html>
