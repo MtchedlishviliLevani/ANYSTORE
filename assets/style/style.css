@@ -294,11 +294,13 @@ footer {
 
 .small-images {
   display: flex;
-  gap: 15px;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 .small-images img {
   width: 85px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   cursor: pointer;
 }
 
@@ -308,7 +310,7 @@ footer {
   border-radius: 6px;
   display: flex;
   justify-content: space-between;
-  gap: 60px;
+  gap: 50px;
 }
 
 .title {
@@ -368,6 +370,12 @@ footer {
 .contact-sec {
   display: flex;
   justify-content: center;
+}
+
+.contact-sec h1 {
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 form label {
@@ -558,6 +566,19 @@ b {
   .icons {
     margin-top: 50px;
   }
+
+  /* product page */
+  .main-wrapper {
+    flex-direction: column;
+  }
+
+  .images-wrapper .main-image {
+    display: block;
+    margin: 0 auto;
+  }
+  .small-images {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -616,5 +637,20 @@ b {
   #tel,
   #message {
     width: 70%;
+  }
+
+  /* product page */
+  .small-images img {
+    width: 80%;
+  }
+  .main-image {
+    object-fit: contain;
+    width: 100% !important;
+  }
+
+  .detailinform-wrapper h1,
+  .detailinform-wrapper h2,
+  .detailinform-wrapper h3 {
+    font-size: 110%;
   }
 }
