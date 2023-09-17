@@ -1,18 +1,26 @@
 const container = document.getElementById("card-container");
 const productWrapper = document.getElementById("product-wrapper");
 const pagination = document.getElementById("pagination");
+const search = document.querySelector(".search-input");
 let currentPage = 1;
 const cardsPerPage = 12;
 let totalCards = 0;
 
-// burgermenu.addEventListener("click", (e) => {
-//   if (nav.classList.contains("active-nav")) {
-//     nav.classList.remove("active-nav");
-//     nav.classList.add("navigation");
-//   }
-// });
+function searchbar(data) {
+  search.addEventListener("input", (e) => {
+    const inputValue = e.target.value.toLowerCase();
+    const filteredData = filterData(data, inputValue);
+    const cards = filteredData.map((item) => createCard(item));
+    renderCards(cards);
+    updatePaginationUI();
+    attachCardClickEvent(filteredData);
+  });
+}
 
-//end
+function filterData(data, inputValue) {
+  return data.filter((x) => x.title.toLowerCase().includes(inputValue));
+}
+
 function fetchData(skip, limit) {
   let url = `https://dummyjson.com/products?limit=${limit}&skip=${skip}`;
 
@@ -28,6 +36,7 @@ function fetchData(skip, limit) {
       const cards = data.products.map((item) => createCard(item));
       renderCards(cards);
       attachCardClickEvent(data.products);
+      searchbar(data.products);
       updatePaginationUI();
     })
     .catch((error) => {
@@ -170,3 +179,4 @@ function attachCardClickEvent(products) {
 
 // Initial page load
 updatePagination();
+searchbar([]);
